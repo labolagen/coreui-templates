@@ -1,5 +1,5 @@
 <!-- $FIELD_NAME_TITLE$ Field -->
-<div class="form-group col-sm-12">
-    {{ html()->label(__('models/$TABLE_NAME$.fields.$FIELD_NAME$').':', '$FIELD_NAME$') }}
-$CHECKBOXES$
+<div class="form-check form-check-inline">
+  {{ html()->label(__('models/$TABLE_NAME$.fields.$FIELD_NAME$').':', '$FIELD_NAME$') }}
+  $CHECKBOXES$
 </div>

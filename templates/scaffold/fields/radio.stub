@@ -1,3 +1,4 @@
 <label class="radio-inline">
-    {{ html()->radio('$FIELD_NAME$', null, '$VALUE$') }} $LABEL$
+    {{ html()->radio('$FIELD_NAME$', null, '$VALUE$') }}
+    {{ html()->label('$LABEL$', '$FIELD_NAME$')->class('form-check-label') }}
 </label>

@@ -1,8 +1,8 @@
 <!-- $FIELD_NAME_TITLE$ Field -->
 <div class="form-group col-sm-6">
-    {{ html()->label('$FIELD_NAME_TITLE$:', '$FIELD_NAME$') }}
-    <label class="checkbox-inline">
-        {{ html()->hidden('$FIELD_NAME$', 0) }}
-        {{ html()->checkbox('$FIELD_NAME$', null, '$CHECKBOX_VALUE$') }}
-    </label>
+    <div class="form-check form-check-inline">
+      {{ html()->hidden('$FIELD_NAME$', 0) }}
+      {{ html()->checkbox('$FIELD_NAME$', true, '$CHECKBOX_VALUE$')->class('form-check-input') }}
+      {{ html()->label('$FIELD_NAME_TITLE$:', '$FIELD_NAME$')->class('form-check-label') }}
+    </div>
 </div>

@@ -1,6 +1,6 @@
 <!-- $FIELD_NAME_TITLE$ Field -->
 <div class="form-group col-sm-6">
     {{ html()->label(__('models/$TABLE_NAME$.fields.$FIELD_NAME$').':', '$FIELD_NAME$') }}
-    {!! Form::file('$FIELD_NAME$') !!}
+    {{ html()->input('file', '$FIELD_NAME$')->class('form-control-file') }}
 </div>
 <div class="clearfix"></div>
