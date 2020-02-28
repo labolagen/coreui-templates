@@ -7,7 +7,7 @@
 <!-- Email Field -->
 <div class="form-group col-sm-6">
     {{ html()->label('Email', 'email') }}
-    {!! Form::email('email', null, ['class' => 'form-control']) !!}
+    {{ html()->input('email', null)->class('form-control') }}
 </div>
 
 <!-- Password Field -->
