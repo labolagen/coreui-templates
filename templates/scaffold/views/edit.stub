@@ -18,11 +18,11 @@
                               <strong>Edit $MODEL_NAME_HUMAN$</strong>
                           </div>
                           <div class="card-body">
-                              {!! Form::model($$MODEL_NAME_CAMEL$, ['route' => ['$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.update', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$], 'method' => 'patch'$FILES$]) !!}
+                              {{ html()-≥modelForm($$MODEL_NAME_CAMEL$, 'PATCH', route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.update', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$))$FILES$->open() }}
 
                               @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
 
-                              {!! Form::close() !!}
+                              {{ html()->closeModelForm() }}
                             </div>
                         </div>
                     </div>

@@ -18,11 +18,11 @@
                               <strong>Edit User</strong>
                           </div>
                           <div class="card-body">
-                              {!! Form::model($user, ['route' => ['users.update', $user->id], 'method' => 'patch']) !!}
+                              {{ html()->modelForm($user, 'PATCH', route('users.update', $user->id))->open() !!}
 
                               @include('users.fields')
 
-                              {!! Form::close() !!}
+                              {{ html()->closeModelForm() }}
                             </div>
                         </div>
                     </div>
