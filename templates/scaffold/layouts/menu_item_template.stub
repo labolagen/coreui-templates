@@ -1,0 +1,6 @@
+<li class="nav-item {{ active_class(Route::is('$ROUTE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$*'))}}">
+    <a class="nav-link {{ active_class(Route::is('$ROUTE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$*'))}}" href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index') }}">
+        <i class="nav-icon fas fa-tachometer-alt"></i>
+        <span>$MODEL_NAME_PLURAL_HUMAN$</span>
+    </a>
+</li>
