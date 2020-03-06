@@ -9,7 +9,7 @@
                       <div class="card">
                           <div class="card-header">
                               <i class="fa fa-edit fa-lg"></i>
-                              <strong>Edit @lang('models/$MODEL_NAME_PLURAL_CAMEL$.singular')</strong>
+                              <strong>Edit @lang('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.singular')</strong>
                           </div>
                           <div class="card-body">
                               {{ html()->modelForm($$MODEL_NAME_CAMEL$, 'PATCH', route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.update', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$))$FILES$->open() }}
