@@ -2,7 +2,7 @@
     <table class="table table-striped" id="$MODEL_NAME_PLURAL_CAMEL$-table">
         <thead>
             $FIELD_HEADERS$
-            <th colspan="3">@lang('crud.action')</th>
+            <th colspan="3">@lang('labels.general.actions')</th>
         </thead>
         <tbody>
         @foreach($$MODEL_NAME_PLURAL_CAMEL$ as $$MODEL_NAME_CAMEL$)
@@ -13,7 +13,7 @@
                     <div class='btn-group'>
                         <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.show', [$$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$]) }}" class='btn btn-ghost-success'><i class="fa fa-eye"></i></a>
                         <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.edit', [$$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$]) }}" class='btn btn-ghost-info'><i class="fa fa-edit"></i></a>
-                        {{ html()->button('<i class="fa fa-trash"></i>', 'submit')->class('btn btn-ghost-danger')->attribute('onclick', 'return confirm("'.__('crud.are_you_sure').')') }}
+                        {{ html()->button('<i class="fa fa-trash"></i>', 'submit')->class('btn btn-ghost-danger')->attribute('onclick', 'return confirm("'.__('strings.backend.general.are_you_sure').')') }}
                     </div>
                     {{ html()->form()->close() }}
                 </td>

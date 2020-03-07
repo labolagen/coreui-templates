@@ -6,6 +6,6 @@
     <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.edit', $$PRIMARY_KEY_NAME$) }}" class='btn btn-ghost-info'>
        <i class="fa fa-edit"></i>
     </a>
-    {{ html()->button('<i class="fa fa-trash"></i>', 'submit')->class('btn btn-ghost-danger')->attribute('onclick', 'return confirm("'.__('crud.are_you_sure').')') }}
+    {{ html()->button('<i class="fa fa-trash"></i>', 'submit')->class('btn btn-ghost-danger')->attribute('onclick', 'return confirm("'.__('strings.backend.general.are_you_sure').')') }}
 </div>
 {{ html()->form()->close() }}
