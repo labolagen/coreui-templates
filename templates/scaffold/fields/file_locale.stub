@@ -1,6 +1,6 @@
 <!-- $FIELD_NAME_TITLE$ Field -->
 <div class="form-group col-sm-6">
-    {{ html()->label(__('$MODEL_LOCALE_PREFIX$labels.backend.table.$FIELD_NAME$').':', '$FIELD_NAME$') }}
+    {{ html()->label(__('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.table.$FIELD_NAME$').':', '$FIELD_NAME$') }}
     {{ html()->input('file', '$FIELD_NAME$')->class('form-control-file') }}
 </div>
 <div class="clearfix"></div>
