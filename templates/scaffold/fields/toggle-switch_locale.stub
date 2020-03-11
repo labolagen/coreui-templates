@@ -1,6 +1,6 @@
 <!-- 'bootstrap / Toggle Switch $FIELD_NAME_TITLE$ Field' -->
 <div class="form-group">
-    {{ html()->label(__('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.table.$FIELD_NAME$').':', '$FIELD_NAME$')->class('form-control-label') }}
+    {{ html()->label(__('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.table.fields.$FIELD_NAME$').':', '$FIELD_NAME$')->class('form-control-label') }}
     <label class="switch switch-label switch-pill switch-primary">
         {{ html()->hidden('$FIELD_NAME$', 0) }}
         {{ html()->checkbox('$FIELD_NAME$', null, 1,)->class('switch-input') }}
