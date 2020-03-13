@@ -1,27 +1,30 @@
 @extends('backend.layouts.app')
 
-@section('content')
-    <div class="container-fluid">
-        <div class="animated fadeIn">
-             @include('flash::message')
-             <div class="row">
-                 <div class="col-lg-12">
-                     <div class="card">
-                         <div class="card-header">
-                             <i class="fa fa-align-justify"></i>
-                             $MODEL_NAME_PLURAL$
-                             <a class="pull-right" href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') }}"><i class="fa fa-plus-square fa-lg"></i></a>
-                         </div>
-                         <div class="card-body">
-                             @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.table')
-                              <div class="pull-right mr-3">
-                                     $PAGINATE$
-                              </div>
-                         </div>
-                     </div>
-                  </div>
-             </div>
-         </div>
-    </div>
-@endsection
+@section('title', app_name() . ' | $MODEL_NAME$ Management')
 
+@section('content')
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-5">
+                <h4 class="card-title mb-0">
+                    $MODEL_NAME$ Management
+                </h4>
+            </div><!--col-->
+
+            <div class="col-sm-7">
+                <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
+                    <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') }}" class="btn btn-success ml-1" data-toggle="tooltip" title="Create New"><i class="fas fa-plus-circle"></i></a>
+                </div><!--btn-toolbar-->
+            </div><!--col-->
+        </div><!--row-->
+
+        <div class="row mt-4">
+            <div class="col">
+                @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.table')
+            </div><!--col-->
+        </div><!--row-->
+        $PAGINATE$
+    </div><!--card-body-->
+</div><!--card-->
+@endsection
