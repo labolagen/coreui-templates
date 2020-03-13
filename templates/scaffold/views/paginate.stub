@@ -1,2 +1,13 @@
+<div class="row">
+    <div class="col-7">
+        <div class="float-left">
+            {!! $$MODEL_NAME_PLURAL_CAMEL$->total() !!} {{ trans_choice('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.table.total', $$MODEL_NAME_PLURAL_CAMEL$->total()) }}
+        </div>
+    </div><!--col-->
 
-        @include('coreui-templates::common.paginate', ['records' => $$MODEL_NAME_PLURAL_CAMEL$])
+    <div class="col-5">
+        <div class="float-right">
+            {!! $$MODEL_NAME_PLURAL_CAMEL$->render() !!}
+        </div>
+    </div><!--col-->
+</div><!--row-->
