@@ -1,26 +1,40 @@
 @extends('backend.layouts.app')
 
+@section('title', '$MODEL_NAME$ Management | Create $MODEL_NAME$')
+
 @section('content')
-     <div class="container-fluid">
-          <div class="animated fadeIn">
-                @include('coreui-templates::common.errors')
+    {{ html()->form('POST', route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.store'))->class('form-horizontal')$FILES$->open() }}
+        <div class="card">
+            <div class="card-body">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <i class="fa fa-plus-square-o fa-lg"></i>
-                                <strong>Create $MODEL_NAME_HUMAN$</strong>
-                            </div>
-                            <div class="card-body">
-                                {{ html()->form('POST',route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.store'))$FILES$->open() }}
+                    <div class="col-sm-5">
+                        <h4 class="card-title mb-0">
+                            $MODEL_NAME$ Management
+                            <small class="text-muted">Create $MODEL_NAME$</small>
+                        </h4>
+                    </div><!--col-->
+                </div><!--row-->
 
-                                   @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
+                <hr>
 
-                                {{ html()->form()->close() }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-           </div>
-    </div>
+                <div class="row mt-4 mb-4">
+                    <div class="col">
+                        @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
+                    </div><!--col-->
+                </div><!--row-->
+            </div><!--card-body-->
+
+            <div class="card-footer clearfix">
+                <div class="row">
+                    <div class="col">
+                        {{ form_cancel(route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index'), 'Cancel') }}
+                    </div><!--col-->
+
+                    <div class="col text-right">
+                        {{ form_submit('Create') }}
+                    </div><!--col-->
+                </div><!--row-->
+            </div><!--card-footer-->
+        </div><!--card-->
+    {{ html()->form()->close() }}
 @endsection

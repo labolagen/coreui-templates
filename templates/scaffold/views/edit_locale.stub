@@ -1,26 +1,40 @@
 @extends('backend.layouts.app')
 
+@section('title', __('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.management') . ' | ' . __('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.edit'))
+
 @section('content')
-    <div class="container-fluid">
-         <div class="animated fadeIn">
-             @include('coreui-templates::common.errors')
-             <div class="row">
-                 <div class="col-lg-12">
-                      <div class="card">
-                          <div class="card-header">
-                              <i class="fa fa-edit fa-lg"></i>
-                              <strong>Edit @lang('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.singular')</strong>
-                          </div>
-                          <div class="card-body">
-                              {{ html()->modelForm($$MODEL_NAME_CAMEL$, 'PATCH', route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.update', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$))$FILES$->open() }}
+    {{ html()->modelForm($$MODEL_NAME_CAMEL$, 'PATCH', route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.update', $$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$))$FILES$->open() }}
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <h4 class="card-title mb-0">
+                            @lang('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.management')
+                            <small class="text-muted">@lang('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.edit')</small>
+                        </h4>
+                    </div><!--col-->
+                </div><!--row-->
 
-                              @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
+                <hr>
 
-                              {{ html()->closeModelForm() }}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-         </div>
-    </div>
+                <div class="row mt-4 mb-4">
+                    <div class="col">
+                        @include('$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.fields')
+                    </div><!--col-->
+                </div><!--row-->
+            </div><!--card-body-->
+
+            <div class="card-footer clearfix">
+                <div class="row">
+                    <div class="col">
+                        {{ form_cancel(route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index'), __('buttons.general.cancel')) }}
+                    </div><!--col-->
+
+                    <div class="col text-right">
+                        {{ form_submit(__('buttons.general.crud.edit')) }}
+                    </div><!--col-->
+                </div><!--row-->
+            </div><!--card-footer-->
+        </div><!--card-->
+    {{ html()->closeModelForm() }}
 @endsection
