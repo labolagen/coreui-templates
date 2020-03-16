@@ -1,8 +1,9 @@
 <!-- $FIELD_NAME_TITLE$ Field -->
-<div class="form-group col-sm-6">
-	<div class="form-check form-check-inline">
-	  {{ html()->hidden('$FIELD_NAME$', 0) }}
-	  {{ html()->checkbox('$FIELD_NAME$', true, '$CHECKBOX_VALUE$')->class('form-check-input') }}
-	  {{ html()->label(__('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.table.fields.$FIELD_NAME$').':', '$FIELD_NAME$')->class('form-check-label') }}
-	</div>
+<div class="form-group row">
+    {{ html()->label(__('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.table.fields.$FIELD_NAME$'), '$FIELD_NAME$')->class('col-md-2 form-control-label') }}
+    <div class="col-md-10">
+        {{ html()->hidden('$FIELD_NAME$', 0) }}
+        {{ html()->checkbox('$FIELD_NAME$', true, '$CHECKBOX_VALUE$')
+            ->id('$FIELD_NAME$_$CHECKBOX_VALUE$') }}
+    </div><!--col-->
 </div>

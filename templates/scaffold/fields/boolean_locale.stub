@@ -1,7 +1,11 @@
 <!-- 'Boolean FIELD_NAME_TITLE$ Field' checked by default -->
-<div class="form-group col-sm-6">
-    <div class="form-check form-check-inline">
-      {{ html()->checkbox('$FIELD_NAME$', true, 1)->class('form-check-input') }}
-      {{ html()->label(__('$MODEL_LOCALE_PREFIX$labels.backend.table.fields.$FIELD_NAME$').':', '$FIELD_NAME$')->class('form-check-label') }}
-    </div>
-</div>
+<div class="form-group row">
+    {{ html()->label(__('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.validation.attributes.backend.$FIELD_NAME$'))->class('col-md-2 form-control-label')->for('$FIELD_NAME$') }}
+
+    <div class="col-md-10">
+        <label class="switch switch-label switch-pill switch-primary">
+            {{ html()->checkbox('$FIELD_NAME$', true, 1)->class('switch-input') }}
+            <span class="switch-slider" data-checked="yes" data-unchecked="no"></span>
+        </label>
+    </div><!--col-->
+</div><!--form-group-->

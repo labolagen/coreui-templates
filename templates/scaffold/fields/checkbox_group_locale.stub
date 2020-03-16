@@ -1,5 +1,0 @@
-<!-- $FIELD_NAME_TITLE$ Field -->
-<div class="form-check form-check-inline">
-  {{ html()->label(__('$MODEL_LOCALE_PREFIX$labels.backend.table.fields.$FIELD_NAME$').':', '$FIELD_NAME$') }}
-  $CHECKBOXES$
-</div>

@@ -1,5 +1,7 @@
 <!-- $FIELD_NAME_TITLE$ Field -->
-<div class="form-group col-sm-12">
-    {{ html()->label(__('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.table.fields.$FIELD_NAME$').':', '$FIELD_NAME$') }}
-$RADIO_BUTTONS$
+<div class="form-group row">
+	{{ html()->label(__('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.validation.attributes.backend.$FIELD_NAME$'), '$FIELD_NAME$')->class('col-md-2 form-control-label') }}
+	<div class="col-md-10">
+		$RADIO_BUTTONS$
+	</div><!--col-->
 </div>
