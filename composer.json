@@ -1,9 +1,9 @@
 {
-    "name": "infyomlabs/coreui-templates",
+    "name": "labolagen/coreui-templates",
     "type": "library",
-    "description": "CoreUI templates for InfyOm Laravel Generator",
+    "description": "CoreUI templates for Labolagen",
     "keywords": [
-        "infyom",
+        "labolagen",
         "laravel",
         "generator",
         "coreui",
@@ -15,6 +15,10 @@
         {
             "name": "Mitul Golakiya",
             "email": "me@mitul.me"
+        },
+        {
+            "name": "skys215",
+            "email": "skys215@gmail.com"
         }
     ],
     "require": {
@@ -23,7 +27,7 @@
     },
     "autoload": {
         "psr-4": {
-            "InfyOm\\CoreUITemplates\\": "src/"
+            "Labolagen\\CoreUITemplates\\": "src/"
         }
     }
 }
