@@ -4,6 +4,7 @@
 
     <div class="col-md-10">
         <label class="switch switch-label switch-pill switch-primary">
+            {{ html()->hidden('$FIELD_NAME$', 0) }}
             {{ html()->checkbox('$FIELD_NAME$', null, 1)->class('switch-input') }}
             <span class="switch-slider" data-checked="yes" data-unchecked="no"></span>
         </label>
