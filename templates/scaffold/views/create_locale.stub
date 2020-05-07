@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title', __('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.management') . ' | ' . __('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.create'))
+@section('title', __('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.labels.backend.management') . ' | ' . __('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.labels.backend.create'))
 
 @section('content')
     {{ html()->form('POST', route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.store'))->class('form-horizontal')$FILES$->open() }}
@@ -9,8 +9,8 @@
                 <div class="row">
                     <div class="col-sm-5">
                         <h4 class="card-title mb-0">
-                            @lang('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.management')
-                            <small class="text-muted">@lang('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.create')</small>
+                            @lang('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.labels.backend.management')
+                            <small class="text-muted">@lang('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.labels.backend.create')</small>
                         </h4>
                     </div><!--col-->
                 </div><!--row-->

@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-7">
         <div class="float-left">
-            {!! $$MODEL_NAME_PLURAL_CAMEL$->total() !!} {{ trans_choice('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.table.total', $$MODEL_NAME_PLURAL_CAMEL$->total()) }}
+            {!! $$MODEL_NAME_PLURAL_CAMEL$->total() !!} {{ trans_choice('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.labels.backend.table.total', $$MODEL_NAME_PLURAL_CAMEL$->total()) }}
         </div>
     </div><!--col-->
 

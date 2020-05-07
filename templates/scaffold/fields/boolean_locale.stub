@@ -1,6 +1,6 @@
 <!-- 'Boolean FIELD_NAME_TITLE$ Field' checked by default -->
 <div class="form-group row">
-    {{ html()->label(__('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.validation.attributes.backend.$FIELD_NAME$'))->class('col-md-2 form-control-label')->for('$FIELD_NAME$') }}
+    {{ html()->label(__('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.validation.attributes.backend.$FIELD_NAME$'))->class('col-md-2 form-control-label')->for('$FIELD_NAME$') }}
 
     <div class="col-md-10">
         <label class="switch switch-label switch-pill switch-primary">

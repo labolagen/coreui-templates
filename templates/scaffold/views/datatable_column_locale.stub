@@ -1,1 +1,1 @@
-'$FIELD_NAME$' => new Column(['title' => __('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.labels.backend.table.fields.$FIELD_NAME$'), 'data' => '$FIELD_NAME$'$SEARCHABLE$])
+'$FIELD_NAME$' => new Column(['title' => __('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.labels.backend.table.fields.$FIELD_NAME$'), 'data' => '$FIELD_NAME$'$SEARCHABLE$])
