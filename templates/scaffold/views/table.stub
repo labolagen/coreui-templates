@@ -15,14 +15,14 @@
                 $FIELD_BODY$
                 <td class="btn-td">
                     <div class="btn-group" role="group" aria-label="$MODEL_NAME$ Actions">
-                        <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.show', [$$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$]) }}" data-toggle="tooltip" data-placement="top" title="View" class="btn btn-info">
+                        <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.show', [$$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$]) }}" data-toggle="tooltip" data-placement="top" title="View" class="btn btn-info">
                             <i class="fas fa-eye"></i>
                         </a>
 
-                        <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.edit', [$$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$]) }}" data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-primary">
+                        <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.edit', [$$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$]) }}" data-toggle="tooltip" data-placement="top" title="Edit" class="btn btn-primary">
                             <i class="fas fa-edit"></i>
                         </a>
-                        <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.destroy', [$$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$]) }}"
+                        <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.destroy', [$$MODEL_NAME_CAMEL$->$PRIMARY_KEY_NAME$]) }}"
                            data-method="delete"
                            data-trans-button-cancel="Cancel"
                            data-trans-button-confirm="Delete"

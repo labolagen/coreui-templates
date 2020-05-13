@@ -3,7 +3,7 @@
 @section('title', '$MODEL_NAME$ Management | Create $MODEL_NAME$')
 
 @section('content')
-    {{ html()->form('POST', route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.store'))->class('form-horizontal')$FILES$->open() }}
+    {{ html()->form('POST', route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.store'))->class('form-horizontal')$FILES$->open() }}
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -27,7 +27,7 @@
             <div class="card-footer clearfix">
                 <div class="row">
                     <div class="col">
-                        {{ form_cancel(route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index'), 'Cancel') }}
+                        {{ form_cancel(route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.index'), 'Cancel') }}
                     </div><!--col-->
 
                     <div class="col text-right">

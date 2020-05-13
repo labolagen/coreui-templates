@@ -3,7 +3,7 @@
 @section('title', __('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.labels.backend.management') . ' | ' . __('$MODEL_LOCALE_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.labels.backend.create'))
 
 @section('content')
-    {{ html()->form('POST', route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.store'))->class('form-horizontal')$FILES$->open() }}
+    {{ html()->form('POST', route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.store'))->class('form-horizontal')$FILES$->open() }}
         <div class="card">
             <div class="card-body">
                 <div class="row">
@@ -27,7 +27,7 @@
             <div class="card-footer clearfix">
                 <div class="row">
                     <div class="col">
-                        {{ form_cancel(route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index'), __('buttons.general.cancel')) }}
+                        {{ form_cancel(route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.index'), __('buttons.general.cancel')) }}
                     </div><!--col-->
 
                     <div class="col text-right">
